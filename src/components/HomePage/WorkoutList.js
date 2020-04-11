@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import WorkoutItem from './WorkoutItem';
 
 const WorkoutList = (props) => {
-	const [state, setState] = useState({
+	const [state] = useState({
 		sections: [
 			{
 				title: 'Aerobic',

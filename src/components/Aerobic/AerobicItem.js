@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const AerobicItem = (props) => {
@@ -13,7 +14,7 @@ const AerobicItem = (props) => {
 				}}
 			>
 				<button>
-					<p>{props.title}</p>
+					<Link to={props.linkUrl}>{props.title}</Link>
 				</button>
 			</div>
 		</div>
@@ -34,7 +35,8 @@ export default styled(AerobicItem)`
 		border: inherit;
 		background-color: #000;
 		padding: 0.5rem;
-		> p {
+		> a {
+			text-decoration: none;
 			color: white;
 			font-size: 1.3rem;
 		}
