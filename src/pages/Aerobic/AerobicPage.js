@@ -1,12 +1,12 @@
 import React from 'react';
 
-import WorkoutList from '../../components/HomePage/WorkoutList';
+import AerobicList from '../../components/Aerobic/AerobicList';
 
 const HomePage = () => {
 	return (
 		<div style={{ textAlign: 'center', color: 'white' }}>
-			<h1>Choose A Workout Type</h1>
-			<WorkoutList />
+			<h1>Choose An Aerobic Type</h1>
+			<AerobicList />
 		</div>
 	);
 };

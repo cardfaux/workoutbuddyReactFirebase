@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const WorkoutItem = (props) => {
+const AerobicItem = (props) => {
 	return (
 		<div className={props.className}>
 			<div
@@ -14,14 +13,14 @@ const WorkoutItem = (props) => {
 				}}
 			>
 				<button>
-					<Link to={props.linkUrl}>{props.title}</Link>
+					<p>{props.title}</p>
 				</button>
 			</div>
 		</div>
 	);
 };
 
-export default styled(WorkoutItem)`
+export default styled(AerobicItem)`
 	.outterbox {
 		border: 1px solid black;
 		padding: 3em;
@@ -35,8 +34,7 @@ export default styled(WorkoutItem)`
 		border: inherit;
 		background-color: #000;
 		padding: 0.5rem;
-		> a {
-			text-decoration: none;
+		> p {
 			color: white;
 			font-size: 1.3rem;
 		}
