@@ -15,6 +15,9 @@ const NavBar = (props) => {
 				<Link className='option' to='/dashboard'>
 					dashboard
 				</Link>
+				<Link className='option' to='/authenticate'>
+					sign in
+				</Link>
 			</div>
 		</div>
 	);
