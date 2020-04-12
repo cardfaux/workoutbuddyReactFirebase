@@ -26,8 +26,8 @@ export default styled(WorkoutItem)`
 		border: 1px solid black;
 		padding: 3em;
 		margin: 3em;
-		width: 30rem;
-		height: 10rem;
+		width: 40rem;
+		height: 20rem;
 		text-align: center;
 	}
 	button {
