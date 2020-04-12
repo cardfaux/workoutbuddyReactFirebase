@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import FormInput from '../FormInput/FormInput';
 import Button from '../Button/Button';
 
+import { signInWithGoogle } from '../../firebase/firebaseUtils';
+
 const SignIn = (props) => {
 	const [state, setState] = useState({
 		email: '',
@@ -43,7 +45,14 @@ const SignIn = (props) => {
 					required
 				/>
 
-				<Button type='submit'>Sign In</Button>
+				<div style={{ display: 'flex' }}>
+					<Button style={{ margin: '0 1rem' }} type='submit'>
+						E-Mail
+					</Button>
+					<Button onClick={signInWithGoogle} isGoogle>
+						Google
+					</Button>
+				</div>
 			</form>
 		</div>
 	);

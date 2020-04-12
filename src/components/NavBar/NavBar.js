@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+import { auth } from '../../firebase/firebaseUtils';
+
 const NavBar = (props) => {
 	return (
 		<div className={props.className}>
@@ -15,9 +17,15 @@ const NavBar = (props) => {
 				<Link className='option' to='/dashboard'>
 					dashboard
 				</Link>
-				<Link className='option' to='/authenticate'>
-					sign in
-				</Link>
+				{props.currentUser ? (
+					<div className='option' onClick={() => auth.signOut()}>
+						sign out
+					</div>
+				) : (
+					<Link className='option' to='/authenticate'>
+						sign in
+					</Link>
+				)}
 			</div>
 		</div>
 	);
@@ -52,6 +60,8 @@ export default styled(NavBar)`
 
 		.option {
 			padding: 10px 15px;
+			cursor: pointer;
+			color: white;
 		}
 	}
 `;

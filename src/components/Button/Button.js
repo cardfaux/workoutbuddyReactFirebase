@@ -1,10 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Button = ({ className, children, ...otherProps }) => {
+const Button = ({ className, isGoogle, children, ...otherProps }) => {
 	return (
 		<div className={className}>
-			<button className='button' {...otherProps}>
+			<button
+				className={`${isGoogle ? `google-button` : ``} button`}
+				{...otherProps}
+			>
 				{children}
 			</button>
 		</div>
@@ -30,6 +33,16 @@ export default styled(Button)`
 			background-color: white;
 			color: black;
 			border: 1px solid black;
+		}
+
+		&.google-button {
+			background-color: #4285f4;
+			color: white;
+
+			&:hover {
+				background-color: #db4437;
+				border: none;
+			}
 		}
 	}
 `;
